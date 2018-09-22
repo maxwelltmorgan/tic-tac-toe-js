@@ -65,17 +65,39 @@ const displayController = (e) => {
     } else if ( gameBoard.board.indexOf("") == -1){
         result.textContent = "tied up";
     }
-    p1Score.textContent = player1Score;
-    p2Score.textContent = player2Score;
+    p1Score.textContent = player1.name + " : " + player1Score;
+    p2Score.textContent = player2.name + " : " + player2Score;
+//    squared[0].textContent = "";
+//    squared[1].textContent = "";
+//    squared[2].textContent = "";
+//    squared[3].textContent = "";
+//    squared[4].textContent = "";
+//    squared[5].textContent = "";
+//    squared[6].textContent = "";
+//    squared[7].textContent = "";
+//    squared[8].textContent = "";
+}
+
+const reset = () => {
+    squared[0].textContent = "";
+    squared[1].textContent = "";
+    squared[2].textContent = "";
+    squared[3].textContent = "";
+    squared[4].textContent = "";
+    squared[5].textContent = "";
+    squared[6].textContent = "";
+    squared[7].textContent = "";
+    squared[8].textContent = "";
+    gameBoard.board = ["","","","","","","","",""];
 }
 
 //factories for players
 const player1 = {
-
+    name: "Jack",
 }
 
 const player2 = {
-
+    name: "Jill",
 }
 
 const renderBoard = () => {
