@@ -2,22 +2,28 @@
 <html>
 <head>
 <link rel="stylesheet" type="text/css" href="index.css">
-<link href="https://fonts.googleapis.com/css?family=Bad+Script" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Bad+Script|Montserrat:400,800" rel="stylesheet">
 </head>
 <body>
 <div class="header">
     <div class="logo-container">
-        <img class="logo" src="sh_logo.png"/>
+        <img class="logo" src="hhwhite.png"/>
     </div>
 </div>
-    <div class="hero">
-        <h4 class="hero-header">Play the game...don't let the game play you!</h4>
-    </div>
-<ul id="squares">
-</ul>
+<div class="hero">
+    <h4 class="hero-header">Play the game...don't let the game play you!</h4>
+</div>
 <h2 id="result">Go ahead.  Make your move!</h2>
-<h3 id="p1score">Player1</h3>
-<h3 id="p2score">Player2</h3>
+<div class="game-container">
+    <ul class="center" id="squares">
+    </ul>
+</div>
+<div class="scoreboard">
+    <ul class="players-container">
+        <li class="players" id="p1score">Player1</li>
+        <li class="players" id="p2score">Player2</li>
+    </ul>
+</div>
 <button onclick="reset()">Reset Board</button>
 <script src="index.js"></script>
 </body>

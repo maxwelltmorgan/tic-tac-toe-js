@@ -2,12 +2,12 @@ body {
     margin: 0;
     font-family: 'Bad Script', cursive;
     text-transform: uppercase;
-    background-color: #FEFCFD;
+    background-color: #fbfbff;
     color: #000505;
 }
 
 .header {
-    background-color: #BFCDE0;
+    background-color: #000505;
 }
 
 .logo-container {
@@ -17,24 +17,33 @@ body {
 
 .logo {
     width: 100%;
+    padding-top: 20px;
 }
 
 .hero {
     text-align: center;
-    padding: 20px;
-    background-color: #3B3355;
+    padding: 5px;
+    background-color: #657ed4;
     color: #FEFCFD;
     margin-bottom: 40px;
-    letter-spacing: 8px;
+    letter-spacing: 6px;
 }
 
-ul {
+#result {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2rem;
+    text-align: center;
+    color: #ff331f;
+}
+
+#squares {
     display: flex;
     flex-wrap: wrap;
     width: 300px;
     height: 300px;
     margin: 0 auto;
-    padding: 0;
+    padding: 25px;
+    font-size: 2rem;
 }
 
 .square {
@@ -45,7 +54,7 @@ ul {
     line-height: 100px;
     justify-content: center;
     box-sizing: border-box;
-    border: #BFCDE0 solid 2px;
+    border: #657ed4 solid 6px;
 }
 
 #square1 {
@@ -82,4 +91,20 @@ ul {
 #square9 {
     border-right: none;
     border-bottom: none;
+}
+
+.players-container {
+    padding: 0;
+    padding-top: 20px;
+    display: flex;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.players {
+    margin: 0 auto;
+    list-style: none;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2rem;
+    display: inline-flex;
 }

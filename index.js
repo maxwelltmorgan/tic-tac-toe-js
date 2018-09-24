@@ -51,7 +51,7 @@ const displayController = (e) => {
         result.textContent = player2.name + " wins";
         player2Score += 1;
     } else if( squared[1].textContent == "O" && squared[4].textContent == "O" && squared[7].textContent == "O"){
-        result.textContent = "you lose";
+        result.textContent = player2.name + " wins";
         player2Score += 1;
     } else if( squared[2].textContent == "O" && squared[5].textContent == "O" && squared[8].textContent == "O"){
         result.textContent = player2.name + " wins";
@@ -63,7 +63,7 @@ const displayController = (e) => {
         result.textContent = player2.name + " wins";
         player2Score += 1;
     } else if ( gameBoard.board.indexOf("") == -1){
-        result.textContent = player2.name + " wins";
+        result.textContent = "It's a draw";
     }
     p1Score.textContent = player1.name + " : " + player1Score;
     p2Score.textContent = player2.name + " : " + player2Score;
