@@ -2,15 +2,23 @@
 <html>
 <head>
 <link rel="stylesheet" type="text/css" href="index.css">
+<link href="https://fonts.googleapis.com/css?family=Bad+Script" rel="stylesheet">
 </head>
 <body>
-<h1 class="banner">TIC TAC TOE<h1>
+<div class="header">
+    <div class="logo-container">
+        <img class="logo" src="sh_logo.png"/>
+    </div>
+</div>
+    <div class="hero">
+        <h4 class="hero-header">Play the game...don't let the game play you!</h4>
+    </div>
 <ul id="squares">
 </ul>
-<h2 id="result"></h2>
-<h3 id="p1score">P1:</h3>
-<h3 id="p2score">P2:</h3>
-<button onclick="reset()">Reset</button>
+<h2 id="result">Go ahead.  Make your move!</h2>
+<h3 id="p1score">Player1</h3>
+<h3 id="p2score">Player2</h3>
+<button onclick="reset()">Reset Board</button>
 <script src="index.js"></script>
 </body>
 </html>

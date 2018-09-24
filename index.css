@@ -1,7 +1,31 @@
-.banner {
+body {
+    margin: 0;
+    font-family: 'Bad Script', cursive;
+    text-transform: uppercase;
+    background-color: #FEFCFD;
+    color: #000505;
+}
+
+.header {
+    background-color: #BFCDE0;
+}
+
+.logo-container {
+    width: 60%;
+    margin: 0 auto;
+}
+
+.logo {
+    width: 100%;
+}
+
+.hero {
     text-align: center;
-    padding-top: 50px;
-    padding-bottom: 50px;
+    padding: 20px;
+    background-color: #3B3355;
+    color: #FEFCFD;
+    margin-bottom: 40px;
+    letter-spacing: 8px;
 }
 
 ul {
@@ -21,7 +45,7 @@ ul {
     line-height: 100px;
     justify-content: center;
     box-sizing: border-box;
-    border: blue solid 2px;
+    border: #BFCDE0 solid 2px;
 }
 
 #square1 {
