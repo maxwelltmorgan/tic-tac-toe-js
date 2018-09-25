@@ -80,16 +80,16 @@ const reset = () => {
     squared[7].textContent = "";
     squared[8].textContent = "";
     gameBoard.board = ["","","","","","","","",""];
-    result.textContent = "Game On!";
+    result.textContent = "Rematch!";
 }
 
 //factories for players
 const player1 = {
-    name: "Jack",
+    name: "Player 1",
 }
 
 const player2 = {
-    name: "Jill",
+    name: "Player 2",
 }
 
 const renderBoard = () => {

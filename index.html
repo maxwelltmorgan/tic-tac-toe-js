@@ -13,18 +13,25 @@
 <div class="hero">
     <h4 class="hero-header">Play the game...don't let the game play you!</h4>
 </div>
-<h2 id="result">Go ahead.  Make your move!</h2>
+<h2 id="result">Ready!</h2>
+
 <div class="game-container">
     <ul class="center" id="squares">
     </ul>
 </div>
+
 <div class="scoreboard">
+    <h2 id="scoreboard-title">Scoreboard</h2>
     <ul class="players-container">
-        <li class="players" id="p1score">Player1</li>
-        <li class="players" id="p2score">Player2</li>
+        <li class="players" id="p1score">Player 1</li>
+        <li class="players" id="p2score">Player 2</li>
     </ul>
 </div>
-<button onclick="reset()">Reset Board</button>
+
+<div class="button-container">
+    <button class="clear-board" onclick="reset()">Reset Board</button>
+</div>
+
 <script src="index.js"></script>
 </body>
 </html>
