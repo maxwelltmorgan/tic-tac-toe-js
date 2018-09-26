@@ -25,15 +25,27 @@ body {
     padding: 5px;
     background-color: #657ed4;
     color: #FEFCFD;
-    margin-bottom: 40px;
+    margin-bottom: 25px;
     letter-spacing: 6px;
+}
+
+.banner {
+    display: block;
+    text-align: center;
 }
 
 #result {
     font-family: 'Montserrat', sans-serif;
-    font-size: 2rem;
-    text-align: center;
+    font-size: 1.8rem;
     color: #ff331f;
+    display: inline-block;
+    padding-right: 20px;
+}
+
+#turn {
+    font-size: 1.2rem;
+    color: #3626a7;
+    display: inline-block;
 }
 
 #squares {
@@ -94,36 +106,64 @@ body {
 }
 
 .scoreboard {
-    background-color: #000505;
+    background-color: #657ed4;
     color: #fbfbff;
 }
 
 #scoreboard-title {
     text-align: center;
     font-family: 'Montserrat', sans-serif;
-    padding: 10px 0;
+    padding: 5px 0;
     font-size: 2rem;
-    background-color: #3626a7;
-    margin-bottom: 0;
+    background-color: #000505;
+    margin-bottom: 10px;
     border-bottom: solid 1px #fbfbff;
     letter-spacing: 4px;
 }
 
-.players-container {
-    padding: 20px;
-    display: flex;
+table, th, td {
+    border: 2px solid #3626a7;
+    border-collapse: collapse;
+}
+
+th {
+    background-color: #3626a7;
+    color: #657ed4;
+    font-family: 'Bad Script', cursive;
+    font-size: 1rem;
+}
+
+td {
+    background-color: #fbfbff;
+    color: #3626a7;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.2rem;
+}
+
+.tally-container {
+    background-color: #000505;
+    color: #fbfbff;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.tally-table {
+    padding: 5px;
     width: 100%;
     margin: 0 auto;
     background-color: #657ed4;
 }
 
-.players {
+.tally-row {
     margin: auto;
     list-style: none;
     font-family: 'Montserrat', sans-serif;
     font-size: 1.4rem;
-    display: inline-flex;
     color: #3626a7;
+}
+
+td {
+    padding-left: 20px;
 }
 
 .button-container {
@@ -141,9 +181,14 @@ body {
     font-size: 1rem;
     margin: 0 auto;
     display: block;
-    background-color: #3626a7;
+    background-color: #ff331f;
     color: #fbfbff;
     word-spacing: 6px;
     letter-spacing: 2px;
-    border-color: white;
+    border: none;
+    opacity: .8;
+}
+
+.clear-board:hover {
+    opacity: 1;
 }

@@ -1,7 +1,8 @@
 let squares = document.getElementById("squares");
 let result = document.getElementById("result");
-let p1Score = document.getElementById("p1score");
-let p2Score = document.getElementById("p2score");
+let turn = document.getElementById("turn");
+let p1Tally = document.getElementById("p1tally");
+let p2Tally = document.getElementById("p2tally");
 
 let player1Score = 0;
 let player2Score = 0;
@@ -15,58 +16,75 @@ let squared = document.getElementsByTagName("li");
 
 const displayController = (e) => {
     if( squared[0].textContent == "X" && squared[1].textContent == "X" && squared[2].textContent == "X"){
-        result.textContent = player1.name + " wins";
+        result.textContent = player1.name + " wins!";
+        tictactoe();
         player1Score += 1;
     } else if( squared[3].textContent == "X" && squared[4].textContent == "X" && squared[5].textContent == "X"){
-        result.textContent = player1.name + " wins";
+        result.textContent = player1.name + " wins!";
+        tictactoe();
         player1Score += 1;
     } else if( squared[6].textContent == "X" && squared[7].textContent == "X" && squared[8].textContent == "X"){
-        result.textContent = player1.name + " wins";
+        result.textContent = player1.name + " wins!";
+        tictactoe();
         player1Score += 1;
     } else if( squared[0].textContent == "X" && squared[3].textContent == "X" && squared[6].textContent == "X"){
-        result.textContent = player1.name + " wins";
+        result.textContent = player1.name + " wins!";
+        tictactoe();
         player1Score += 1;
     } else if( squared[1].textContent == "X" && squared[4].textContent == "X" && squared[7].textContent == "X"){
-        result.textContent = player1.name + " wins";
+        result.textContent = player1.name + " wins!";
+        tictactoe();
         player1Score += 1;
     } else if( squared[2].textContent == "X" && squared[5].textContent == "X" && squared[8].textContent == "X"){
-        result.textContent = player1.name + " wins";
+        result.textContent = player1.name + " wins!";
+        tictactoe();
         player1Score += 1;
     } else if( squared[0].textContent == "X" && squared[4].textContent == "X" && squared[8].textContent == "X"){
-        result.textContent = player1.name + " wins";
+        result.textContent = player1.name + " wins!";
+        tictactoe();
         player1Score += 1;
     } else if( squared[2].textContent == "X" && squared[4].textContent == "X" && squared[6].textContent == "X"){
-        result.textContent = player1.name + " wins";
+        result.textContent = player1.name + " wins!";
+        tictactoe();
         player1Score += 1;
     } else if( squared[0].textContent == "O" && squared[1].textContent == "O" && squared[2].textContent == "O"){
-        result.textContent = player2.name + " wins";
+        result.textContent = player2.name + " wins!";
+        tictactoe();
         player2Score += 1;
     } else if( squared[3].textContent == "O" && squared[4].textContent == "O" && squared[5].textContent == "O"){
-        result.textContent = player2.name + " wins";
+        result.textContent = player2.name + " wins!";
+        tictactoe();
         player2Score += 1;
     } else if( squared[6].textContent == "O" && squared[7].textContent == "O" && squared[8].textContent == "O"){
-        result.textContent = player2.name + " wins";
+        result.textContent = player2.name + " wins!";
+        tictactoe();
         player2Score += 1;
     } else if( squared[0].textContent == "O" && squared[3].textContent == "O" && squared[6].textContent == "O"){
-        result.textContent = player2.name + " wins";
+        result.textContent = player2.name + " wins!";
+        tictactoe();
         player2Score += 1;
     } else if( squared[1].textContent == "O" && squared[4].textContent == "O" && squared[7].textContent == "O"){
-        result.textContent = player2.name + " wins";
+        result.textContent = player2.name + " wins!";
+        tictactoe();
         player2Score += 1;
     } else if( squared[2].textContent == "O" && squared[5].textContent == "O" && squared[8].textContent == "O"){
-        result.textContent = player2.name + " wins";
+        result.textContent = player2.name + " wins!";
+        tictactoe();
         player2Score += 1;
     } else if( squared[0].textContent == "O" && squared[4].textContent == "O" && squared[8].textContent == "O"){
-        result.textContent = player2.name + " wins";
+        result.textContent = player2.name + " wins!";
+        tictactoe();
         player2Score += 1;
     } else if( squared[2].textContent == "O" && squared[4].textContent == "O" && squared[6].textContent == "O"){
-        result.textContent = player2.name + " wins";
+        result.textContent = player2.name + " wins!";
+        tictactoe();
         player2Score += 1;
     } else if ( gameBoard.board.indexOf("") == -1){
         result.textContent = "It's a draw";
+        tictactoe();
     }
-    p1Score.textContent = player1.name + " : " + player1Score;
-    p2Score.textContent = player2.name + " : " + player2Score;
+    p1tally.textContent = player1.name + " : " + player1Score;
+    p2tally.textContent = player2.name + " : " + player2Score;
 }
 
 const reset = () => {
@@ -83,16 +101,37 @@ const reset = () => {
     result.textContent = "Rematch!";
 }
 
-//factories for players
-const player1 = {
-    name: "Player 1",
+const tictactoe = () => {
+    squared[0].textContent = "T";
+    squared[1].textContent = "I";
+    squared[2].textContent = "C";
+    squared[3].textContent = "T";
+    squared[4].textContent = "A";
+    squared[5].textContent = "C";
+    squared[6].textContent = "T";
+    squared[7].textContent = "O";
+    squared[8].textContent = "E";
 }
 
-const player2 = {
-    name: "Player 2",
+//factories for players
+let player1 = {
+    name: "",
 }
+
+let player2 = {
+    name: "",
+}
+
+player1.name = prompt("Team X : Enter player name", "Player One");
+player2.name = prompt("Team O : Enter player name", "Player Two");
+
+p1Tally.textContent = player1.name;
+p2Tally.textContent = player2.name;
+
+turn.textContent = player1.name + "'s turn";
 
 const renderBoard = () => {
+
     for(var i = 0; i < gameBoard.board.length; i++){
         let square = document.createElement("li");
         square.textContent = gameBoard.board[i];
@@ -109,9 +148,11 @@ const renderBoard = () => {
                 if(counter % 2 == 0){
                     mark = "X";
                     counter += 1;
+                    turn.textContent = player2.name + "'s turn";
                 } else {
                     mark = "O";
                     counter += 1;
+                    turn.textContent = player1.name + "'s turn";
                 }
                 e.target.textContent = mark;
                 console.log(e.target.getAttribute("data"));

@@ -7,13 +7,16 @@
 <body>
 <div class="header">
     <div class="logo-container">
-        <img class="logo" src="hhwhite.png"/>
+        <img class="logo" src="ttt_final.png"/>
     </div>
 </div>
 <div class="hero">
     <h4 class="hero-header">Play the game...don't let the game play you!</h4>
 </div>
-<h2 id="result">Ready!</h2>
+<div class="banner">
+    <h2 id="result">Ready!</h2>
+    <h3 id="turn"></h3>
+</div>
 
 <div class="game-container">
     <ul class="center" id="squares">
@@ -21,11 +24,19 @@
 </div>
 
 <div class="scoreboard">
-    <h2 id="scoreboard-title">Scoreboard</h2>
-    <ul class="players-container">
-        <li class="players" id="p1score">Player 1</li>
-        <li class="players" id="p2score">Player 2</li>
-    </ul>
+    <h2 id="scoreboard-title">Tally Sheet</h2>
+    <div class="tally-container">
+        <table class="tally-table">
+            <tr class="tally-row">
+                <th>Team X</th>
+                <th>Team O</th>
+            </tr>
+            <tr>
+                <td id="p1tally">player</td>
+                <td id="p2tally">player</td>
+            </tr>
+        </table>
+    </div>
 </div>
 
 <div class="button-container">
