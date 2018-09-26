@@ -105,12 +105,12 @@ body {
     border-bottom: none;
 }
 
-.scoreboard {
+.tally {
     background-color: #657ed4;
     color: #fbfbff;
 }
 
-#scoreboard-title {
+#tally-title {
     text-align: center;
     font-family: 'Montserrat', sans-serif;
     padding: 5px 0;

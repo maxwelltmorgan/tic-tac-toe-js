@@ -3,16 +3,14 @@ let result = document.getElementById("result");
 let turn = document.getElementById("turn");
 let p1Tally = document.getElementById("p1tally");
 let p2Tally = document.getElementById("p2tally");
+let squared = document.getElementsByTagName("li");
 
 let player1Score = 0;
 let player2Score = 0;
 
-//modules for gameboard and controller
 const gameBoard = {
     board: ["","","","","","","","",""]
 }
-
-let squared = document.getElementsByTagName("li");
 
 const displayController = (e) => {
     if( squared[0].textContent == "X" && squared[1].textContent == "X" && squared[2].textContent == "X"){
@@ -113,7 +111,6 @@ const tictactoe = () => {
     squared[8].textContent = "E";
 }
 
-//factories for players
 let player1 = {
     name: "",
 }
